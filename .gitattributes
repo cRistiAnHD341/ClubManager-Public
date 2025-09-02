@@ -1,6 +1,9 @@
-*.application binary
-*.manifest binary
-*.deploy binary
-*.dll binary
-*.exe binary
-*.config text eol=crlf
+# ClickOnce files - binary mode, no text processing 
+*.application binary 
+*.manifest binary 
+*.deploy binary 
+*.dll binary 
+*.exe binary 
+*.config binary 
+* -text 
+Application\ Files/** binary 

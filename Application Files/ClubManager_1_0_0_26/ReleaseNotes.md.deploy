@@ -1,0 +1,44 @@
+﻿## v{{Version}} ({{Date}})
+
+Novedades destacadas
+- Tipos de Abono: botón “Imprimir” en la barra de acciones
+  - Nuevo comando para imprimir el listado actual de tipos de abono.
+  - Usa la misma infraestructura de impresión (ListPrintService) que otros listados.
+- Ventana “Novedades” tras actualizar
+  - Se muestra automáticamente solo en el primer arranque tras actualización (ClickOnce por reflexión segura) o cuando cambia la versión detectada en ejecución no ClickOnce.
+  - Lee las notas desde ReleaseNotes.md (carpeta de la app); si existe sección “## vX.Y.Z”, muestra solo esa.
+  - Permite forzar su visualización con la variable de entorno: CLUBMANAGER_FORCE_WHATSNEW=1.
+
+Mejoras
+- Consistencia visual: “Novedades” ahora usa estilos globales (ModernWindowStyle, ModernBorder, ModernButton).
+- Inicio robusto: se muestra “Novedades” al renderizar SelectorWindow (ContentRendered) para evitar que quede detrás o cause cierres prematuros.
+- Impresión de Abonados: resumen de tallas en cabecera del listado y mejor paginación.
+- Listados de Registro de Accesos por partido: títulos con contexto (vs. equipo visitante), filtros visibles y columnas optimizadas.
+
+Correcciones
+- Eliminada la dependencia de ejecución de System.Deployment: detección ClickOnce por reflexión para evitar “Reference assemblies cannot be loaded (0x80131058)”.
+- Propietario de la ventana “Novedades”: se fija MainWindow=SelectorWindow y Owner coherente, evitando cierres inesperados.
+- Evitado deadlock en UI: no se usa .Wait() sobre async al mostrar “Novedades”.
+- Handler de eventos correcto: ContentRendered usa EventHandler (no RoutedEventHandler) para evitar CS0029.
+- Lectura de notas de versión más robusta (ruta de app y alternativa en Documentos\ClubManager).
+
+Cómo usar (rápido)
+1) Imprimir Tipos de Abono
+   - Abre Tipos de Abono.
+   - Aplica filtros si lo necesitas (texto).
+   - Pulsa “Imprimir” y confirma la impresora/tamaño/orientación.
+2) Ver las novedades tras actualizar
+   - Al primer arranque tras la actualización se mostrará la ventana “Novedades”.
+   - En desarrollo, puede forzarse con CLUBMANAGER_FORCE_WHATSNEW=1.
+
+Notas técnicas
+- ReleaseNotes con tokens
+  - Cabecera con tokens: “## v{{Version}} ({{Date}})”.
+  - Los tokens se sustituyen en runtime o durante Build/Publish (plantilla + Target MSBuild opcional).
+- Detección ClickOnce
+  - Por reflexión: si hay despliegue ClickOnce real, se usa IsFirstRun y CurrentVersion; si no, se compara la versión persistida (Registro).
+- Estilos
+  - Ventana “Novedades” adaptada a estilos globales (colores, bordes, tipografías) para coherencia con el resto de la aplicación.
+
+Requisitos
+- .NET 9 • Windows (WPF)

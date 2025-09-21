@@ -1,0 +1,35 @@
+﻿## v{{Version}} ({{Date}})
+
+Novedades destacadas
+- Registro de Accesos: impresión de listados por partido
+  - Nuevos listados: Accesos de Abonados y Accesos por Entrada.
+  - Cabecera con título contextual (vs. equipo visitante), totales y filtros aplicados.
+  - Paginación automática, anchos de columna ajustados y alineación coherente.
+- Ventana “Novedades” tras actualizar
+  - Se muestra automáticamente al instalar/actualizar (ClickOnce IsFirstRun) o cuando cambia la versión detectada.
+  - Lee las notas desde ReleaseNotes.md (carpeta de la app); si existe sección “## vX.Y.Z”, muestra solo esa.
+  - Permite forzar su visualización con la variable de entorno: CLUBMANAGER_FORCE_WHATSNEW=1.
+
+Mejoras
+- Integración de impresión desde Registro de Accesos: botón Imprimir para elegir el listado (Abonados / Entradas).
+- Confirmación de impresión más clara: impresora seleccionada, tamaño de papel y orientación.
+- Encabezados y pies de página más consistentes y legibles en todos los listados.
+- Resumen de tallas (S/M/L/…) en el listado de Abonados cuando procede.
+
+Correcciones
+- Error de compilación por variable no asignada en UpdateService (lastV).
+- Lectura de notas de versión más robusta (ruta de app y alternativa en Documentos\ClubManager).
+- Fallback de versión en modo no ClickOnce: se usa ProductVersion/FileVersion cuando IsNetworkDeployed es falso.
+- Manejo de errores al configurar impresora y al crear documentos de impresión.
+
+Cómo usar (rápido)
+1) Imprimir accesos del partido
+   - Abrir Partidos → “Registro de Accesos”.
+   - Aplicar filtros si es necesario.
+   - Pulsar “Imprimir” y elegir Abonados o Entradas.
+2) Ver las novedades tras actualizar
+   - Al primer arranque tras la actualización se mostrará la ventana “Novedades”.
+   - En desarrollo, puede forzarse con CLUBMANAGER_FORCE_WHATSNEW=1.
+
+Requisitos
+- .NET 9 • Windows (WPF)

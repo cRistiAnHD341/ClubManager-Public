@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="ClubManager.exe" version="1.0.0.24" publicKeyToken="17001185e3010bcd" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="ClubManager.exe" version="1.0.0.25" publicKeyToken="17001185e3010bcd" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -62,13 +63,13 @@
       <dsig:DigestValue>FDSlDrwOtFBh4s52GMWI0luuZjQFY3FtZQE1mkcLk0g=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ClubManager.dll" size="2976720">
+  <file name="ClubManager.dll" size="2993616">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jtGKUlmbbF5xrvKooOfFJxqk1Uz6cNyEtxnQH1d76To=</dsig:DigestValue>
+      <dsig:DigestValue>OZTTYzFmokrbZZnoSddOKLjDy/TE5EW9bAYv7Ni6ztc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ClubManager.dll.config" size="1030">
@@ -80,13 +81,13 @@
       <dsig:DigestValue>Pc5mQELaSXvrK5OcTloGZqf3DY5kxxdd2cJhzJ8335A=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ClubManager.exe" size="155600">
+  <file name="ClubManager.exe" size="171472">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Pqv0Mu6cQfRtRJxZYiwCX72NfEO9PCN8IFFl3Krf/10=</dsig:DigestValue>
+      <dsig:DigestValue>H6vOJFO3CSkeuBC79G7P+EvcJQ6m8Y4IjOBsz3IATc0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ClubManager.runtimeconfig.json" size="585">
@@ -404,13 +405,13 @@
       <dsig:DigestValue>MddoQqs/FJTIZe2aFU3HWkZfaIYFivEnO6qg4wBaJi8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ReleaseNotes.md" size="1912">
+  <file name="ReleaseNotes.md" size="1913">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>derXq5Pf+dJ1ERmhxP3g8iG/2hWHCjstyfsGRULenNw=</dsig:DigestValue>
+      <dsig:DigestValue>S15V4GlQpvKbxf3yEzq11XY0oNtZlhUMWHSyagNHxVI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ro\Xceed.Wpf.AvalonDock.resources.dll" size="6144">
@@ -710,4 +711,4 @@
       <dsig:DigestValue>yGmEJkLM7xijHftwrwV0S/B3ukIDwhT9bf/2MbT5H1s=</dsig:DigestValue>
     </hash>
   </file>
-<publisherIdentity name="CN=DESKTOP-AR2EKAN\yo" issuerKeyHash="2ba0553df237669f0f5be7f8b27578394b194406" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>vHMRuQZIgTMToRMrhbciUNujWiwKqQCEVy5s4IZpwOQ=</DigestValue></Reference></SignedInfo><SignatureValue>QxA/HSgfK1zr8tSMWLm5o3mvXFKqTm0Pp5eOTKI5DNq7eO/XVZjrvJ3xGH0jAmB+b94I3vxgVhPpiGnOAnhUK5EB0ygmjGv1loqtA8qYX49lxYp1idB+VfVnx6iuUpx07mpORB6Nzu9LoxKoTohU9XpaIUCDh75mrq92yw6enxE=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>6AamvMYRR0zSZZZGUWyOu6lB1y5TZLcTBBLUMus4KkLWyPUCBPNSfo+UopqzjbVksvvuXaCNHylfAliXaYQ2NAxJXigfT+KoJ2VCsbLs87AIq1cteGfKf+wRGIvP0tULLs7TFcsIED62O0gA9Y7Ed8csoCm6rqhSU3tJ7W944v0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e4c06986e06c2e578400a90a2c5aa3db5022b7852b13a11333814806b91173bc" Description="" Url=""><as:assemblyIdentity name="ClubManager.exe" version="1.0.0.24" publicKeyToken="17001185e3010bcd" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-AR2EKAN\yo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>DyqYc7NRMpDnA6eQdZaFnsrrf3kL9c1kMMLdpQOnjMo=</DigestValue></Reference></SignedInfo><SignatureValue>d4Khfj2Bckx5g5K3rZhfHz8ZseY3qp9mW40uORjmK+B7iZC69q08A/tRnop0zoBWwiein56N1D4dlHFEPsjuuVx3XkqUtzfNalvKleizJ81cML/pKZKA5RT7Otm86l2ZBIXBS8cRnmYsXYlokKPzx/i9lth0Cw0lEnL1qM8g+YY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>6AamvMYRR0zSZZZGUWyOu6lB1y5TZLcTBBLUMus4KkLWyPUCBPNSfo+UopqzjbVksvvuXaCNHylfAliXaYQ2NAxJXigfT+KoJ2VCsbLs87AIq1cteGfKf+wRGIvP0tULLs7TFcsIED62O0gA9Y7Ed8csoCm6rqhSU3tJ7W944v0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQfwDhSfOF5bJIb1OshWO+XDANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEEAUgAyAEUASwBBAE4AXAB5AG8wHhcNMjUwNzMwMTM0MzMxWhcNMjYwNzMwMTk0MzMxWjAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEEAUgAyAEUASwBBAE4AXAB5AG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAOgGprzGEUdM0mWWRlFsjrupQdcuU2S3EwQS1DLrOCpC1sj1AgTzUn6PlKKas421ZLL77l2gjR8pXwJYl2mENjQMSV4oH0/iqCdlQrGy7POwCKtXLXhnyn/sERiLz9LVCy7O0xXLCBA+tjtIAPWOxHfHLKApuq6oUlN7Se1veOL9AgMBAAEwDQYJKoZIhvcNAQELBQADgYEAePB04VW785vqvf2IC5HS/CHWrz26WbFAlAGzeG+weHe3ksWE50Pl5Oti8/8jWqJWLDchVzNfXYLyxPpNqKQMFr9bsoGDrX60oFB9jUaAM6C1xLKKCuCy2XUreOJerFqH8ye8rCSR0dCol2ZHarnwRqHOtPjK5ek3IEkKuv82CHU=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=DESKTOP-AR2EKAN\yo" issuerKeyHash="2ba0553df237669f0f5be7f8b27578394b194406" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>78I51JN1CPI/eYv4rYs2UY8wzKo4lmOT8rnTSbrNJgM=</DigestValue></Reference></SignedInfo><SignatureValue>0TKCuYmUZy3Pq0cT00QfqsquqfMvZssVKEGwtGq1A781KD9hJuw/N1/46s43tC7cptUDAUsK9ZM51yNec6PpFkDqjYOXSM2/q7H2qWIj5OkcFkgdOnK62EMjOBIiLhxORJIxL8VLNx7dCvfRiMHoMKPDcb4CBcC/ydnFbhaBoQs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>6AamvMYRR0zSZZZGUWyOu6lB1y5TZLcTBBLUMus4KkLWyPUCBPNSfo+UopqzjbVksvvuXaCNHylfAliXaYQ2NAxJXigfT+KoJ2VCsbLs87AIq1cteGfKf+wRGIvP0tULLs7TFcsIED62O0gA9Y7Ed8csoCm6rqhSU3tJ7W944v0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="0326cdba49d3b9f293639638aacc308f51368badf88b793ff2087593d439c2ef" Description="" Url=""><as:assemblyIdentity name="ClubManager.exe" version="1.0.0.25" publicKeyToken="17001185e3010bcd" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-AR2EKAN\yo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>lgJetmTKflKAgIezCKPCh3RzfREflozPdkPMkYej2M4=</DigestValue></Reference></SignedInfo><SignatureValue>GmZxdXBb+E0GXex8/9GhaavLw0BFqv2JBeMKNEX2WZrEmioVciq2UJ2eDYb/Jy3oWWtIRRh6sApyMTYJYhaAg7W5T4eRs8pOdHpUU6dS94juDM6Snnb5+wo2uhUP8MKfapqr5BtaWpfhQOaXnbQiG3rfHrqQ/3SYRieXO5nt57w=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>6AamvMYRR0zSZZZGUWyOu6lB1y5TZLcTBBLUMus4KkLWyPUCBPNSfo+UopqzjbVksvvuXaCNHylfAliXaYQ2NAxJXigfT+KoJ2VCsbLs87AIq1cteGfKf+wRGIvP0tULLs7TFcsIED62O0gA9Y7Ed8csoCm6rqhSU3tJ7W944v0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQfwDhSfOF5bJIb1OshWO+XDANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEEAUgAyAEUASwBBAE4AXAB5AG8wHhcNMjUwNzMwMTM0MzMxWhcNMjYwNzMwMTk0MzMxWjAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEEAUgAyAEUASwBBAE4AXAB5AG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAOgGprzGEUdM0mWWRlFsjrupQdcuU2S3EwQS1DLrOCpC1sj1AgTzUn6PlKKas421ZLL77l2gjR8pXwJYl2mENjQMSV4oH0/iqCdlQrGy7POwCKtXLXhnyn/sERiLz9LVCy7O0xXLCBA+tjtIAPWOxHfHLKApuq6oUlN7Se1veOL9AgMBAAEwDQYJKoZIhvcNAQELBQADgYEAePB04VW785vqvf2IC5HS/CHWrz26WbFAlAGzeG+weHe3ksWE50Pl5Oti8/8jWqJWLDchVzNfXYLyxPpNqKQMFr9bsoGDrX60oFB9jUaAM6C1xLKKCuCy2XUreOJerFqH8ye8rCSR0dCol2ZHarnwRqHOtPjK5ek3IEkKuv82CHU=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

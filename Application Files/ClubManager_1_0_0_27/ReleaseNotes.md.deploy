@@ -1,0 +1,56 @@
+﻿## v{{Version}} ({{Date}})
+
+Novedades destacadas
+- Control de Acceso: Detección automática de Arduino (sin COM fijo)
+  - Escaneo de todos los puertos serie disponibles con heurística (descripciones WMI: Arduino / CH340 / FTDI / CP210x / USB-SERIAL).
+  - Handshake rápido multi‑baud (115200, 9600, 57600) y selección automática del primer dispositivo válido.
+  - Soporte multi‑Arduino: listado en cabecera (ComboBox) para elegir y botón “Conectar”.
+  - Botón permanente “🔌 Arduino” para re-escanear y reconectar en caliente durante el partido sin cerrar la ventana.
+- Sesión de usuario unificada
+  - Uso ahora de UserSession en Models (eliminando dependencias de la versión Services para este módulo).
+  - Cálculo dinámico de EsAdministrador (Rol + permisos avanzados de UserPermissions).
+  - Actualización automática vía INotifyPropertyChanged (sin eventos de login/logout específicos).
+- Modo Pruebas Administrador en Control de Acceso
+  - GroupBox visible sólo para administradores con inyección de códigos de barras hacia Arduino (CODE:<valor>).
+- UI Control de Acceso
+  - Añadido ComboBox + botón “Conectar” para seleccionar entre múltiples Arduinos detectados.
+  - Separación clara entre reconexión NFC y reconexión Arduino.
+  - Overlay de resultado (permitido/denegado) ya documentado: ahora convive con nueva lógica de reconexión sin bloquear.
+
+Mejoras
+- Handshake Arduino más robusto (limpieza de buffer + “PING” tras “ARDUINO_READY” / “PONG”).
+- Reintento automático si el puerto se desconecta (corte de cable) sin necesidad de reiniciar ventana.
+- Lógica de permisos: fallback a permisos granulares (CanConfigureControlAcceso*, CanManagePartidos, CanAccessUsuarios).
+- Código de detección desacoplado: método ScanArduinoCandidatesAsync reutilizable para futuras herramientas.
+- Preparado para persistir último puerto elegido (fácil de añadir en configuración si se requiere).
+
+Correcciones
+- Eliminado uso de la versión duplicada de UserSession que provocaba falta de propiedades (CanAdmin / eventos).
+- Evitados accesos redundantes a puertos no válidos (corta al primer baud exitoso por puerto).
+- Limpieza de suscripciones PropertyChanged al cerrar la ventana (evita fugas de memoria).
+
+Notas técnicas
+- Nueva clase interna ArduinoDeviceInfo (binding-friendly).
+- Escaneo WMI opcional (Win32_SerialPort); si falla, continúa con SerialPort nativo.
+- Heurística de priorización: primero puertos con descripciones coincidentes (palabras clave), luego orden alfabético.
+- Handshake aceptado si recibe cualquiera: ARDUINO_READY | PONG | CODE:... (permite firmware flexible).
+- Se mantiene la lista BaudCandidates centralizada para pruebas rápidas.
+- No se ha introducido persistencia de selección (intencionado para evitar mal state entre sesiones).
+
+Cómo usar (rápido)
+1) Conectar Arduino automáticamente:
+   - Abrir Control de Acceso → se auto-escanea y conecta al primer dispositivo válido.
+   - Si hay varios: elegir otro en el ComboBox y pulsar “Conectar”.
+2) Re-escanear durante el partido:
+   - Pulsar “🔌 Arduino” (no detiene el registro de accesos NFC).
+3) Inyectar un código de prueba (admin):
+   - Abrir el panel “Modo Pruebas”.
+   - Escribir código → “Inyectar” (simula lectura Arduino).
+4) Verificar permisos admin:
+   - Cambiar de usuario → EsAdministrador se recalcula y muestra/oculta controles especiales automáticamente.
+
+Próximos pasos sugeridos
+- Persistir último puerto/baud exitoso (optimiza primer arranque).
+- Añadir métrica de latencia por puerto para priorizar conexiones más estables.
+- Integrar logs detallados de conexión en una pestaña de diagnóstico (opcional).
+- Añadir opción “Modo sólo lectura” para operadores sin acceso a pruebas Arduino.
